@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wolf Enterprise : Proposal to eliminate incorrect formatting of phone numbers in Daylite</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Wolf Enterprise</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Wolf-Enterprise-Home_75333689.html">Wolf Enterprise Home</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Wolf Enterprise : Proposal to eliminate incorrect formatting of phone numbers in Daylite
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Michael R. Wolf</span>, last modified on 2020-01-14
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="ProposaltoeliminateincorrectformattingofphonenumbersinDaylite-Summary">Summary</h2><p class="media-group"><span class="confluence-embedded-file-wrapper"><a class="confluence-embedded-file" href="attachments/129433620/139427844.org" data-nice-type="null" data-file-src="/wiki/download/attachments/129433620/intl_phone.org?version=1&amp;modificationDate=1579032433069&amp;cacheVersion=1&amp;api=v2" data-linked-resource-id="139427844" data-linked-resource-type="attachment" data-linked-resource-container-id="129433620" data-linked-resource-default-alias="intl_phone.org" data-mime-type="application/octet-stream" data-has-thumbnail="true" data-linked-resource-version="1" data-media-id="c698d1f6-47d1-4b55-b6a5-232460b1cb37" data-media-type="file"><img src="attachments/thumbnails/129433620/139427844" height="250"/></a></span></p><p /><p style="margin-left: 30.0px;">See: &lt;a href=”file:////Users/michael/Marketcircle/intl_phone.org”&gt;Org file with Marketcircle proposal&lt;/a&gt;</p><p>Daylite’s phone number reformatting is helpful for NANP phone numbers.  For many 10- and 11-digit numbers, not only is the formatting against local conventions, but the reformatting translates the dialing sequence to be incorrect.</p><p>Examples:</p><ul><li><p>NANP 10- (or 11-) digit number</p><ul><li><p>“5095551212” (or “509 555 1212” or “509-555-1212”) → “(509) 555-1212)”  </p></li><li><p>“15095551212” (or “1 509 555 1212” or “1 509-555-1212”) → “(509) 555-1212)”  </p><ul><li><p>Formatting: User formatting → conventional formatting (helpful or not?)</p></li><li><p>FaceTime.app or iPhone: Working → Working</p></li></ul></li></ul></li><li><p>(NANP) Helpful + Correct: </p><ul><li><p>“+15095551212” (or “+1 509 555 1212” or “+1 509-555-1212”) → “(509) 555-1212)”  </p><ul><li><p>Formatting: User input → conventional</p></li><li><p>FaceTime.app or iPhone: Working (NANP + Internationally)<br/>→ Working (NANP) + <strong>Not working (Internationally)</strong></p></li></ul></li></ul></li><li><p>(Denmark) Unhelpful + Incorrect: </p><ul><li><p>“+43 3084 8344” → “(453) 084-8344”.   </p><ul><li><p>Formatting: Conventional → <strong>Not conventional</strong></p></li><li><p>FaceTime.app or iPhone: Working<br/>→ <strong>Not working (in Denmark) + Not working (internationally)</strong></p></li></ul></li></ul></li></ul><p>I propose a simple change that would allow DL to:</p><ul><li><p>follow conventions for NANP phone numbers</p></li><li><p>not be wrong for international numbers (though it may not be <em>correct</em> or follow <em>conventions</em>)</p></li></ul><p>The logic is simple:</p><ul><li><p>If the user enters a character string beginning with “+”, leave the string unchanged.  Assume that the user knows the conventions for formatting a phone number.  Therefore, the <em>code</em> need not attempt to enforce the conventions.</p></li><li><p>Otherwise, leave the code unchanged so that it reformats (or preserves) user input as it currently does.</p></li><li><p>(Optional) If the character string begins with “+1”, indicating a NANP phone number, allow the code to enforce the conventional formatting of “+1 (905) 480-5555”.</p></li></ul><h2 id="ProposaltoeliminateincorrectformattingofphonenumbersinDaylite-Background">Background</h2><ul><li><p>The <a class="external-link" href="https://en.wikipedia.org/wiki/International_Telecommunication_Union" rel="nofollow">International Telecommunication Union</a> (ITU) has established a comprehensive numbering plan, designated <a class="external-link" href="https://en.wikipedia.org/wiki/E.164" rel="nofollow">E.164</a>, for uniform interoperability of the networks of its member state or regional administrations.  </p></li><li><p>In contrast to numbering plans, which determine telephone numbers assigned to subscriber stations, <a class="external-link" href="https://en.wikipedia.org/wiki/Dialing_plan" rel="nofollow">dialing plans</a> establish the customer dialing procedures, i.e., the sequence of digits or symbols to be dialed to reach a destination.</p></li></ul><p /><ul><li><p>This includes many different <a class="external-link" href="https://en.wikipedia.org/wiki/Telephone_numbering_plan" rel="nofollow">Telephone numbering </a>plan, </p></li></ul><p><a class="external-link" href="https://en.wikipedia.org/wiki/Telephone_numbering_plan" rel="nofollow">https://en.wikipedia.org/wiki/Telephone_numbering_plan</a></p><p /><p>Fixing the code that reformats numbers would be very difficult.  It took decades for the ITU (International Telecommunication Union) to define a comrehensive numbering plan,</p><p /><p /><p /><p>There are many “Telephone Numbering Plans” in use around the world, and even when the telecom equipment gets it right </p><p>reformatting code to be helpful would be a fool’s errand.  It took decades for the independent phone systems to</p><p>I propose that all telephone number reformatting code be disabled for character strings beginning with “+”, but remain enabled for 7-, 10-, and (maybe) 11-digit phone numbers.</p><h2 id="ProposaltoeliminateincorrectformattingofphonenumbersinDaylite-Background.1">Background</h2><p>At the root of the issue is that the code assumes the input string of characters should be interpreted as a NANP phone number.  </p><p>By convention, international telephone numbers are indicated in listings by prefixing the country code with a plus sign (+).  <a class="external-link" href="https://en.wikipedia.org/wiki/Telephone_numbering_plan" rel="nofollow">https://en.wikipedia.org/wiki/Telephone_numbering_plan</a></p><p /><h2 id="ProposaltoeliminateincorrectformattingofphonenumbersinDaylite-Details(Partial)">Details (Partial)</h2><p>Conflict between:</p><ul><li><p>NANP (North American Numbering Plan)</p></li><li><p>ETNS (European Telephony Numbering Space)</p></li><li><p>National Telephone Numbering Plan (See: “Telephone numbers in the United Kingdom”)</p></li></ul><h2 id="ProposaltoeliminateincorrectformattingofphonenumbersinDaylite-References">References</h2><ul><li><p>Wikipedia Contributors. (2019, September 25). Telephone numbering plan. Retrieved January 10, 2020, from Wikipedia website: <a class="external-link" href="https://en.wikipedia.org/wiki/Telephone_numbering_plan" rel="nofollow">https://en.wikipedia.org/wiki/Telephone_numbering_plan</a></p></li><li><p>Wikipedia Contributors. (2019, December 21). North American Numbering Plan. Retrieved January 10, 2020, from Wikipedia website: <a class="external-link" href="https://en.wikipedia.org/wiki/North_American_Numbering_Plan" rel="nofollow">https://en.wikipedia.org/wiki/North_American_Numbering_Plan</a></p></li><li><p>Wikipedia Contributors. (2019, November 6). European Telephony Numbering Space. Retrieved January 10, 2020, from Wikipedia website: <a class="external-link" href="https://en.wikipedia.org/wiki/European_Telephony_Numbering_Space" rel="nofollow">https://en.wikipedia.org/wiki/European_Telephony_Numbering_Space</a></p></li><li><p>Wikipedia Contributors. (2020, January 8). Telephone numbers in the United Kingdom. Retrieved January 10, 2020, from Wikipedia website: <a class="external-link" href="https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom" rel="nofollow">https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom</a></p></li><li><p>Wikipedia Contributors. (2020, January 9). National conventions for writing telephone numbers. Retrieved January 10, 2020, from Wikipedia website: <a class="external-link" href="https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers" rel="nofollow">https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers</a></p><p>‌</p><p>‌</p></li></ul><p /><p>‌‌</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/129433620/139427844.org">intl_phone.org</a> (application/octet-stream)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 2025-12-07 16:29</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

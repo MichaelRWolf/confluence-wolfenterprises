@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning &amp; Development : CodexPedia</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Learning &amp; Development</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="10125445.html">Learning &amp; Development Home</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Learning &amp; Development : CodexPedia
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Michael R. Wolf</span> on 2022-12-22
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Housed at different locations:</p><ul><li><p><a class="external-link" href="http://codexpedia.com" rel="nofollow">codexpedia.com</a>: <a class="external-link" data-card-appearance="inline" href="https://www.codexpedia.com/" rel="nofollow">https://www.codexpedia.com/</a> </p></li><li><p><a class="external-link" href="http://toolbot.ai" rel="nofollow">toolbot.ai</a>: <a class="external-link" data-card-appearance="inline" href="https://www.toolbot.ai/apps/CodexPedia" rel="nofollow">https://www.toolbot.ai/apps/CodexPedia</a> </p></li></ul><p><a class="external-link" href="http://chat.openai.com/chat" rel="nofollow">chat.openai.com/chat</a></p><p /><h1 id="CodexPedia-GoogleAppsScript">Google Apps Script</h1><h2 id="CodexPedia-Attempt#1@toolbot.ai">Attempt #1 @ toolbot.ai</h2><blockquote><p>create Google Apps Script program (using TypeScript, not Javascript style) in file called main.ts will prompt user for date, amount, and account, then use 'class Transaction' definition in file 'Transaction.ts'</p></blockquote><p /><h1 id="CodexPedia-GoogleAppsScriptProgram">Google Apps Script Program</h1><p>This program is written in Typescript and saved in a file called <code>main.ts</code>.<br/>It will prompt the user for a date, amount, and account, and use the <code>class Transaction</code> definition in the file <code>Transaction.ts</code>.</p><h2 id="CodexPedia-Installation">Installation</h2><ol start="1"><li><p>Create a blank Google Apps Script project.</p></li><li><p>Go to the project's Resources menu and select <strong>Add a new file</strong>.</p></li><li><p>Enter <code>Transaction.ts</code> as the new file name and paste the following code:</p></li></ol><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">class Transaction {
+  date: Date;
+  amount: number;
+  account: string;
+
+  constructor(date: Date, amount: number, account: string) {
+    this.date = date;
+    this.amount = amount;
+    this.account = account;
+  }
+}</pre>
+</div></div><ol start="1"><li><p>Go to the project's Resources menu and select <strong>Add a new file</strong>.</p></li><li><p>Enter <code>main.ts</code> as the new file name and paste the following code:</p></li></ol><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">// Prompt the user for a date, amount, and account
+const dateString = prompt(&quot;Enter a date:&quot;);
+const amountString = prompt(&quot;Enter an amount:&quot;);
+const accountString = prompt(&quot;Enter an account:&quot;);
+
+// Create a Transaction object
+const tr = new Transaction(
+  new Date(dateString),
+  Number(amountString),
+  accountString
+);
+
+// Do something with the Transaction object
+console.log(`Transaction details: ${tr.date}, ${tr.amount}, ${tr.account}`);</pre>
+</div></div><ol start="1"><li><p>Save the project and run the <code>main.ts</code> file.</p></li><li><p>Follow the prompts to enter the date, amount, and account for the new transaction.</p></li></ol><hr/><p /><h2 id="CodexPedia-Attempt1@">Attempt 1 @ </h2>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 2025-12-07 16:08</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

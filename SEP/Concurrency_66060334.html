@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Software Engineer Program : Concurrency</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Software Engineer Program</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Software-Engineer-Program-Home_64028724.html">Software Engineer Program Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="SEP-Schedule_64061447.html">SEP Schedule</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Software Engineer Program : Concurrency
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Michael R. Wolf</span>, last modified on 2019-07-31
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="Concurrency-Intro-WholeModule">Intro - Whole Module</h2><ul><li>Anyone know why Piggly Wiggly was revolutionary?  (4 aisles, 605 items, all priced, self-serve shopping, turnstile exit, shopping cart (1937), single cash register).  Imagine how inventive the Piggly Wiggly was.  Or worse, imagine before that.  What was scarce resource?  What could be parallelized (i.e. threaded)?  How does that happen in today's supermarket?  What does 'queue' mean?  How does queuing work in different parts of the world?</li><li><a class="createlink" href="/wiki/pages/createpage.action?spaceKey=SEP&amp;title=Demo%20A&amp;linkCreation=true&amp;fromPageId=66060334">Demo A</a> here?</li></ul><h2 id="Concurrency-Pacing">Pacing</h2><p>Day 4 1of3 - 9:15 - 12:15 (w/ 0:15 break) → 2:45 → 165 minutes</p><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/><col/></colgroup><tbody><tr><td class="highlight-yellow confluenceTd" data-highlight-colour="yellow">Duration</td><td class="highlight-yellow confluenceTd" data-highlight-colour="yellow">Activity</td><td class="highlight-yellow confluenceTd" data-highlight-colour="yellow">Details</td></tr><tr><td colspan="1" class="confluenceTd">5</td><td colspan="1" class="confluenceTd">Discussion</td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td colspan="1" class="confluenceTd">20</td><td colspan="1" class="confluenceTd">PPT: 12 Slides<br/>Concurrency_SEP_2019</td><td colspan="1" class="confluenceTd"><ul><li>S6: sequencing: run-before: Seattle → Sydney</li><li>S7: Compound → Critical Section</li><li>S8: Demo A (<a class="createlink" href="/wiki/pages/createpage.action?spaceKey=SEP&amp;title=Demo%20A&amp;linkCreation=true&amp;fromPageId=66060334">below</a>)</li><li>S11: Expensive: creating threads, comparing strings</li><li>S11: <a href="#Concurrency-Exercise1">Exercise 1</a> &amp; <a href="#Concurrency-Exercise2">Exercise 2</a></li><li>S12: Survey</li></ul></td></tr><tr><td colspan="1" class="confluenceTd">30</td><td colspan="1" class="confluenceTd">Exercise 1: Defensive Concurrency</td><td colspan="1" class="confluenceTd"><ul><li>Intro/Extro (<a href="#Concurrency-Exercise1">below</a>)</li><li>IG in OneNote</li></ul></td></tr><tr><td colspan="1" class="confluenceTd">95</td><td colspan="1" class="confluenceTd">Exercise 2: Strategic Concurrency</td><td colspan="1" class="confluenceTd"><ul><li>Intro/Extro/Setup/Solution (<a href="#Concurrency-Exercise2">below</a>)</li><li>IG in OneNote.  Great setup/intro/extro.</li></ul></td></tr><tr><td colspan="1" class="confluenceTd">15</td><td colspan="1" class="confluenceTd">Discussion, Summary, Take-Aways</td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td colspan="1" class="confluenceTd">5</td><td colspan="1" class="confluenceTd">Survey</td><td colspan="1" class="confluenceTd"><br/></td></tr></tbody></table></div><h2 id="Concurrency-DemoADemoA-SharedMutableObjects"><span class="confluence-anchor-link" id="Concurrency-DemoA"><span class="confluence-anchor-link" id="Demo A"></span></span>Demo A - Shared Mutable Objects</h2><p>Steps:</p><ol><li>Code to board w/ line numbers</li><li>Variable storage boxes on board w/ initial value</li><li>One volunteer. Finger is program counter &amp; eraser.  Pen is permuter.</li><li>Walk through w/ one person.  He who writes last, writes best.</li><li>Add second person/thread.</li><li>Add third person/thread.</li></ol><p><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Demo Code: Concurrency</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: true; theme: Confluence" data-theme="Confluence">final float pi = 355/113.
+if (Math.abs(pi_approx - Math.PI) &gt; 0.0001) { throw new NewMathException(&quot;This isn&#39;t close enough&quot;) }
+float i = 1;
+int loop_count = 0;
+int match_count = 0;
+while (loop_count++ &gt; 0) { // forever...
+    if (i == 1) {
+        match_count++;
+        if (i != 1) {
+            throw Exception(&quot;Lies, lies.  We just asserted that it *is* equal to 1&quot;);
+        }
+        x++;
+        x--;
+        if (loop_counter % 100 == 0) { System.out.println(loop_count, match_count/loop_count)
+
+</pre>
+</div></div><h2 id="Concurrency-Exericise1Exercise1:DefensiveConcurrency"><span class="confluence-anchor-link" id="Concurrency-Exericise1"><span class="confluence-anchor-link" id="Exericise 1"></span></span>Exercise 1: Defensive Concurrency</h2><h3 id="Concurrency-Intro">Intro</h3><ul><li>Engineers: go/learninghub → Concurrency</li><li>Instructor Guide (w/ setup, solution, debrief) available from OneNote tab</li><li>Use &quot;H:\training-shell\projects&quot;, not &quot;I:\&quot;</li><li>Substitute your SID!!!</li><li>Solution: 'public synchronized void fn(){}</li><li>Other solutions: ???  (volatile didn't do it)</li></ul><p>Extro</p><ul><li>synchronized creates run-before dependency on object</li></ul><h2 id="Concurrency-Exercise2Exercise2:StrategicConcurrency"><span class="confluence-anchor-link" id="Concurrency-Exercise2"><span class="confluence-anchor-link" id="Exercise 2"></span></span>Exercise 2: Strategic Concurrency</h2><h3 id="Concurrency-Setup">Setup</h3><ul><li>On board: Config info from IG for 'application.properties' file: user, password, wsUrl, loginUrl</li></ul><h3 id="Concurrency-Intro.1">Intro</h3><ul><li>Game is similar to final project.</li><li>3 games.  Progressively harder.</li><li>Server will send out requests for you to answer.  Don't give away concurrency.</li><li>Play at will.  Room is your competition (and collaborators).</li><li>Will only need to modify Player.java file.</li><li>Increasing difficulty: CalculateTV &lt;&lt; CalculateDV &lt;&lt; CalculateVWAPP</li></ul><h3 id="Concurrency-Solution">Solution</h3><ul><li><span class="placeholder-inline-tasks">See origin/develop branch.</span></li></ul><h3 id="Concurrency-Extro">Extro</h3><ul><li>What did you learn?</li></ul><p><br/></p><p><br/></p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 2025-12-07 16:37</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
