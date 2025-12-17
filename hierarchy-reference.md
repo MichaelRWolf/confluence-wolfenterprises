@@ -143,8 +143,8 @@ Instead, we preserve hierarchy as **documentation**:
 Example files:
 
 - `LIV-hierarchy.md`
+- `ALIGN-hierarchy.md` ([ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) space - BLOOM)
 - `BLOOM-hierarchy.md`
-- `ALIGN-hierarchy.md`
 
 These files contain:
 
@@ -163,31 +163,40 @@ They act as:
 
 ---
 
-## Example (LIV Space)
+## Example ([ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) Space - BLOOM)
 
 ```md
-# LIV – Original Confluence Hierarchy (Preserved)
+# ALIGN (BLOOM) – Original Confluence Hierarchy (Preserved)
+
+*See [hierarchy-reference.md](hierarchy-reference.md) for format specification.*
 
 ## Hierarchy Outline
 
-- Living
-  - Housing
-    - Living in real apartments (spring 2022)
-    - Housing Opportunities
-  - RV
-    - RV – 2021-08-01
-    - RV Break-in – 2024-06-29
-  - Health
-    - Health Insurance
-    - Health Solutions – BSA
+- [BLOOM](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=326533328)
+  - [BLOOM: BIG Picture: Branding, Offerings, etc](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=614498331)
+    - [Wendy's Visions for Ministry Impact & Money](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=2531852289)
+  - [Tools](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=663683116)
+    - [MemberVault, Cartra, HubSpot, Podia.... Patreon](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=951091215)
 ```
 
 ### Mapping Table
 
-| Confluence Title                        | HTML Export     | Google Doc Title                        |
-|-----------------------------------------|-----------------|-----------------------------------------|
-| RV Break-in – 2024-06-29                | 2453504001.html | RV Break-in – 2024-06-29                |
-| Living in real apartments (spring 2022) | 2166391009.html | Living in real apartments (spring 2022) |
+| Confluence Title                                | Confluence Link                                                                                                                                                                                                                    | HTML Export                                                                                                                                        | Google Doc Title |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| Wendy's Visions for Ministry Impact & Money     | [Page ID](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=2531852289), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289/Wendy%27s+Visions+for+Ministry+Impact+%26+Money)     | [2531852289.html](ALIGN/2531852289.html)                                                                                                           | (same)           |
+| MemberVault, Cartra, HubSpot, Podia.... Patreon | [Page ID](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=951091215), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215/MemberVault%2C+Cartra%2C+HubSpot%2C+Podia....+Patreon) | [MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html](ALIGN/MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html) | (same)           |
+
+**Note:** When Confluence Title and Google Doc Title are identical (including capitalization, punctuation, and whitespace), the Google Doc Title column shows "(same)" to reduce visual clutter.
+
+**Why titles might differ:**
+
+- Special characters: Confluence allows characters that Google Docs filenames reject (e.g., `/`, `\`, `:`, `*`, `?`, `"`, `<`, `>`, `|`)
+- Length limits: Google Docs enforces filename length restrictions
+- Whitespace normalization: Multiple spaces collapsed, leading/trailing spaces removed
+- URL encoding: Characters like `&`, `+`, `%` may be decoded or normalized differently
+- Manual edits: Titles intentionally changed during migration
+- Case handling: Differences in how case sensitivity is applied
+- Unicode normalization: Different normalization forms (NFC vs NFD)
 
 This is enough information to:
 
@@ -197,12 +206,43 @@ This is enough information to:
 
 ---
 
-## Example Applicability (BLOOM / ALIGN)
+## Implementation Notes
+
+**Page ID extraction:**
+
+- For number-only filenames (e.g., `2531852289.html`): the page ID is the number before `.html`
+- For encoded filenames (e.g., `MemberVault%2C-Cartra_951091215.html`): the page ID is the number after the final underscore before `.html`
+
+**Page URL encoding:**
+
+- Page titles in URLs must be URL-encoded (spaces become `+`, special characters percent-encoded)
+- Use the actual Confluence page title, not the HTML filename
+
+**Hierarchy outline:**
+
+- Include all pages that appear in the Confluence space hierarchy
+- Use indentation (2 spaces per level) to show parent/child relationships
+- Link each page title to its Confluence page using the page ID URL format
+
+**Mapping table:**
+
+- Include all pages from the space, not just those shown in the hierarchy outline
+- If a page appears in the hierarchy outline, include it in the mapping table
+- Pages not in the hierarchy (orphaned pages) should still appear in the mapping table
+
+**Space name format:**
+
+- Use format: `SPACE_KEY (Display Name)` where Display Name is the space's display name from Confluence
+- If space key and display name are identical, use: `SPACE_KEY`
+
+---
+
+## Example Applicability ([ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) (BLOOM) / Other Spaces)
 
 The same pattern applies cleanly to other spaces:
 
-- BLOOM: product, people, experiments, notes
-- ALIGN: principles, working agreements, reference material
+- [ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) (BLOOM): product, people, experiments, notes
+- Other spaces: principles, working agreements, reference material
 
 Each space gets:
 
