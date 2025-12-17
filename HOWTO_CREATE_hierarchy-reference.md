@@ -138,13 +138,13 @@ Instead, we preserve hierarchy as **documentation**:
 
 ---
 
-## The Preservation Artifact: `<SPACE>-hierarchy.md`
+## The Preservation Artifact: `<SPACE>-hierarchy-reference.md`
 
 Example files:
 
-- `LIV-hierarchy.md`
-- `ALIGN-hierarchy.md` ([ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) space - BLOOM)
-- `BLOOM-hierarchy.md`
+- `LIV-hierarchy-reference.md`
+- `ALIGN-hierarchy-reference.md` ([ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) space - BLOOM)
+- `BLOOM-hierarchy-reference.md`
 
 These files contain:
 
@@ -168,7 +168,7 @@ They act as:
 ```md
 # ALIGN (BLOOM) – Original Confluence Hierarchy (Preserved)
 
-*See [hierarchy-reference.md](hierarchy-reference.md) for format specification.*
+*See [HOWTO_CREATE_hierarchy-reference.md](HOWTO_CREATE_hierarchy-reference.md) for format specification.*
 
 ## Hierarchy Outline
 
@@ -273,7 +273,7 @@ This document is intentionally structured so that an agent can:
 
 - parse hierarchy outlines
 - read mapping tables
-- generate `<SPACE>-hierarchy.md` files automatically
+- generate `<SPACE>-hierarchy-reference.md` files automatically
 - optionally reconstruct folders in the future
 
 No assumptions are baked in.

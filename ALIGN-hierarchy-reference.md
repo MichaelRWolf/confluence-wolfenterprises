@@ -1,6 +1,6 @@
 # ALIGN (BLOOM) – Original Confluence Hierarchy (Preserved)
 
-*See [hierarchy-reference.md](hierarchy-reference.md) for format specification.*
+*See [HOWTO_CREATE_hierarchy-reference.md](HOWTO_CREATE_hierarchy-reference.md) for format specification.*
 
 ## Hierarchy Outline
 

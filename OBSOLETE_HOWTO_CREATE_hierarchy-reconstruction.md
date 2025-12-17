@@ -2,7 +2,9 @@
 
 ⚠️ **WARNING: This approach was NOT selected for the migration.**
 
-We chose to **preserve** hierarchy as reference metadata instead of reconstructing it. See [hierarchy-reference.md](hierarchy-reference.md) for the selected approach.
+We chose to **preserve** hierarchy as reference metadata instead of reconstructing it. See [HOWTO_CREATE_hierarchy-reference.md](HOWTO_CREATE_hierarchy-reference.md) for the selected approach.
+
+Preserved hierarchy reference files follow the naming convention: `<SPACE>-hierarchy-reference.md` (for example, `ALIGN-hierarchy-reference.md`).
 
 **Why reconstruction was rejected:**
 
