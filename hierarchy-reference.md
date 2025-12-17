@@ -172,19 +172,19 @@ They act as:
 
 ## Hierarchy Outline
 
-- [BLOOM](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=326533328)
-  - [BLOOM: BIG Picture: Branding, Offerings, etc](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=614498331)
-    - [Wendy's Visions for Ministry Impact & Money](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=2531852289)
-  - [Tools](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=663683116)
-    - [MemberVault, Cartra, HubSpot, Podia.... Patreon](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=951091215)
+- [BLOOM](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/326533328)
+  - [BLOOM: BIG Picture: Branding, Offerings, etc](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/614498331)
+    - [Wendy's Visions for Ministry Impact & Money](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289)
+  - [Tools](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/663683116)
+    - [MemberVault, Cartra, HubSpot, Podia.... Patreon](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215)
 ```
 
 ### Mapping Table
 
 | Confluence Title                                | Confluence Link                                                                                                                                                                                                                    | HTML Export                                                                                                                                        | Google Doc Title |
 |-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| Wendy's Visions for Ministry Impact & Money     | [Page ID](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=2531852289), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289/Wendy%27s+Visions+for+Ministry+Impact+%26+Money)     | [2531852289.html](ALIGN/2531852289.html)                                                                                                           | (same)           |
-| MemberVault, Cartra, HubSpot, Podia.... Patreon | [Page ID](https://wolfenterprises.atlassian.net/pages/viewpage.action?pageId=951091215), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215/MemberVault%2C+Cartra%2C+HubSpot%2C+Podia....+Patreon) | [MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html](ALIGN/MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html) | (same)           |
+| Wendy's Visions for Ministry Impact & Money     | [Page ID](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289/Wendy%27s+Visions+for+Ministry+Impact+%26+Money)          | [2531852289.html](ALIGN/2531852289.html)                                                                                                           | (same)           |
+| MemberVault, Cartra, HubSpot, Podia.... Patreon | [Page ID](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215/MemberVault%2C+Cartra%2C+HubSpot%2C+Podia....+Patreon)      | [MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html](ALIGN/MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html) | (same)           |
 
 **Note:** When Confluence Title and Google Doc Title are identical (including capitalization, punctuation, and whitespace), the Google Doc Title column shows "(same)" to reduce visual clutter.
 
@@ -217,12 +217,15 @@ This is enough information to:
 
 - Page titles in URLs must be URL-encoded (spaces become `+`, special characters percent-encoded)
 - Use the actual Confluence page title, not the HTML filename
+- Prefer the `/wiki/spaces/<SPACE_KEY>/pages/<PAGE_ID>` link form; avoid `pages/viewpage.action?pageId=<PAGE_ID>` (it may not resolve correctly in Confluence Cloud)
 
 **Hierarchy outline:**
 
 - Include all pages that appear in the Confluence space hierarchy
 - Use indentation (2 spaces per level) to show parent/child relationships
-- Link each page title to its Confluence page using the page ID URL format
+- Link each page title to its Confluence page using the page ID URL format (works without the title slug; Confluence will often redirect to add it):
+  - `https://<site>.atlassian.net/wiki/spaces/<SPACE_KEY>/pages/<PAGE_ID>`
+  - `https://<site>.atlassian.net/wiki/spaces/<SPACE_KEY>/pages/<PAGE_ID>/<Title+Slug>` (optional)
 
 **Mapping table:**
 
