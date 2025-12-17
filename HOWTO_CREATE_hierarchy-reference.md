@@ -146,13 +146,17 @@ Example files:
 - `ALIGN-hierarchy-reference.md` ([ALIGN](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN) space - BLOOM)
 - `BLOOM-hierarchy-reference.md`
 
+**Filename rules:**
+
+- Filenames may preserve spaces and punctuation (e.g., `Michael Personal Space-hierarchy-reference.md`)
+- The `<SPACE>` portion should match the Confluence export folder name for that space
+
 These files contain:
 
 1. The original Confluence hierarchy as an outline
 2. A mapping between:
    - original page titles
    - exported HTML filenames
-   - resulting Google Doc titles
 3. Minimal guidance for future manual reconstruction
 
 They act as:
@@ -181,22 +185,24 @@ They act as:
 
 ### Mapping Table
 
-| Confluence Title                                | Confluence Link                                                                                                                                                                                                                    | HTML Export                                                                                                                                        | Google Doc Title |
-|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| Wendy's Visions for Ministry Impact & Money     | [Page ID](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289/Wendy%27s+Visions+for+Ministry+Impact+%26+Money)          | [2531852289.html](ALIGN/2531852289.html)                                                                                                           | (same)           |
-| MemberVault, Cartra, HubSpot, Podia.... Patreon | [Page ID](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215), [Page URL](https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215/MemberVault%2C+Cartra%2C+HubSpot%2C+Podia....+Patreon)      | [MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html](ALIGN/MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html) | (same)           |
+| Confluence Title                                | Confluence Link                                               | HTML Export                   |
+|-------------------------------------------------|---------------------------------------------------------------|-------------------------------|
+| Wendy's Visions for Ministry Impact & Money     | [Page ID][align-2531852289], [Page URL][align-2531852289-url] | [HTML][align-2531852289-html] |
+| MemberVault, Cartra, HubSpot, Podia.... Patreon | [Page ID][align-951091215], [Page URL][align-951091215-url]   | [HTML][align-951091215-html]  |
 
-**Note:** When Confluence Title and Google Doc Title are identical (including capitalization, punctuation, and whitespace), the Google Doc Title column shows "(same)" to reduce visual clutter.
+[align-2531852289]: https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289
+[align-2531852289-url]: https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/2531852289/Wendy%27s+Visions+for+Ministry+Impact+%26+Money
+[align-2531852289-html]: ALIGN/2531852289.html
+[align-951091215]: https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215
+[align-951091215-url]: https://wolfenterprises.atlassian.net/wiki/spaces/ALIGN/pages/951091215/MemberVault%2C+Cartra%2C+HubSpot%2C+Podia....+Patreon
+[align-951091215-html]: ALIGN/MemberVault%2C-Cartra%2C-HubSpot%2C-Podia....-Patreon_951091215.html
 
 **Why titles might differ:**
 
-- Special characters: Confluence allows characters that Google Docs filenames reject (e.g., `/`, `\`, `:`, `*`, `?`, `"`, `<`, `>`, `|`)
-- Length limits: Google Docs enforces filename length restrictions
-- Whitespace normalization: Multiple spaces collapsed, leading/trailing spaces removed
-- URL encoding: Characters like `&`, `+`, `%` may be decoded or normalized differently
-- Manual edits: Titles intentionally changed during migration
-- Case handling: Differences in how case sensitivity is applied
-- Unicode normalization: Different normalization forms (NFC vs NFD)
+- HTML export filenames are derived from titles but are not identical
+- URL encoding: spaces and special characters become URL-encoded in filenames and in Confluence title slugs
+- Confluence titles can change over time; older exports may not match current titles
+- Some exports are numeric-only (e.g., `2531852289.html`) while others embed a title slug (e.g., `Soul-Leadership_196610.html`)
 
 This is enough information to:
 
@@ -230,13 +236,17 @@ This is enough information to:
 **Mapping table:**
 
 - Include all pages from the space, not just those shown in the hierarchy outline
-- If a page appears in the hierarchy outline, include it in the mapping table
-- Pages not in the hierarchy (orphaned pages) should still appear in the mapping table
+- Order rows to match the hierarchy outline first, then append orphan pages sorted by Confluence Title
+- Include `index.html` as a special first row (so it stays clickable), even though it is not a Confluence page:
+  - Confluence Title: `Space index`
+  - Confluence Link: `https://<site>.atlassian.net/wiki/spaces/<SPACE_KEY>`
+  - HTML Export: `<SPACE_FOLDER>/index.html`
 
 **Space name format:**
 
 - Use format: `SPACE_KEY (Display Name)` where Display Name is the space's display name from Confluence
 - If space key and display name are identical, use: `SPACE_KEY`
+- For simplicity, you may use the Confluence export folder name as `SPACE_KEY` (personal spaces may not resolve perfectly, and that's acceptable if link accuracy there is not important)
 
 ---
 
